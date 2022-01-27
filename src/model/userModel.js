@@ -6,6 +6,7 @@ const userSchema = mongoose.Schema(
     email: String,
     password: String,
     isAdmin: Boolean,
+    token: { type: String },
   },
   {
     timestamps: true,
