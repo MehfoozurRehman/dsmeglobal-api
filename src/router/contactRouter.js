@@ -17,5 +17,20 @@ router.post("/set_contact", async (req, res) => {
     console.log(error);
   }
 });
+router.delete("/delete_contact", async (req, res) => {
+  try {
+    contactModel.deleteOne({ _id: req.body._id }, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json({
+          message: "successfully Deleted",
+        });
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 module.exports = router;

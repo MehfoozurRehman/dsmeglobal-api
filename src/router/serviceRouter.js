@@ -18,4 +18,20 @@ router.post("/set_service", async (req, res) => {
   }
 });
 
+router.delete("/delete_service", async (req, res) => {
+  try {
+    serviceModel.deleteOne({ _id: req.body._id }, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json({
+          message: "successfully Deleted",
+        });
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
