@@ -18,6 +18,15 @@ router.post("/set_project", async (req, res) => {
   }
 });
 
+router.put("/update_project", async (req, res) => {
+  try {
+    await projectModel.findOneAndUpdate({ _id: req.body._id }, req.body);
+    res.send(req.body);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 router.delete("/delete_project", async (req, res) => {
   try {
     projectModel.deleteOne({ _id: req.body._id }, (err) => {

@@ -18,6 +18,15 @@ router.post("/set_service", async (req, res) => {
   }
 });
 
+router.put("/update_service", async (req, res) => {
+  try {
+    await serviceModel.findOneAndUpdate({ _id: req.body._id }, req.body);
+    res.send(req.body);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 router.delete("/delete_service", async (req, res) => {
   try {
     serviceModel.deleteOne({ _id: req.body._id }, (err) => {
