@@ -9,6 +9,7 @@ const workRouter = require("./router/workRouter");
 const projectRouter = require("./router/projectRouter");
 const contactRouter = require("./router/contactRouter");
 const serviceRouter = require("./router/serviceRouter");
+const categoryRouter = require("./router/categoryRouter");
 
 // api config
 const app = express();
@@ -38,17 +39,13 @@ app.get("/", (req, res) => {
     message: "Hey welcome to dsmeglobal",
   });
 });
-app.get("/api/v1/get_our_work", (req, res) => {
-  res.json({
-    message: "Hey welcome to dsmeglobal",
-  });
-});
 app.use("/api/v1", authRouter);
 app.use("/api/v1", newsLetterRouter);
 app.use("/api/v1", workRouter);
 app.use("/api/v1", projectRouter);
 app.use("/api/v1", contactRouter);
 app.use("/api/v1", serviceRouter);
+app.use("/api/v1", categoryRouter);
 // listner
 app.listen(PORT, () => {
   console.log("api working");
