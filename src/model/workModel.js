@@ -6,7 +6,7 @@ const workSchema = mongoose.Schema(
     image: String,
     company: String,
     title: String,
-    discription: String,
+    description: String,
   },
   {
     timestamps: true,

@@ -5,7 +5,7 @@ const serviceSchema = mongoose.Schema(
     logo: String,
     title: String,
     image: String,
-    discription: String,
+    description: String,
     category: String,
   },
   {
