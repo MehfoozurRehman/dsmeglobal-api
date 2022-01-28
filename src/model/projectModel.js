@@ -5,7 +5,7 @@ const projectSchema = mongoose.Schema(
     title: String,
     image: String,
     categories: Array,
-    isOur: Boolean,
+    isOur: Array,
     url: String,
   },
   {
