@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const fileUpload = require("express-fileupload");
+const path = require("path");
 const dotenv = require("dotenv");
 dotenv.config();
 const authRouter = require("./router/authRouter");
@@ -17,8 +19,10 @@ const app = express();
 const PORT = process.env.PORT || 9000;
 
 // middleware
+app.use(express.static("public"));
 app.use(express.json());
 app.use(cors());
+app.use(fileUpload());
 
 // db config
 mongoose
@@ -39,6 +43,23 @@ app.get("/", (req, res) => {
   res.json({
     message: "Hey welcome to dsmeglobal",
   });
+});
+
+app.post("/upload", function (req, res) {
+  const image = req.files.image;
+  const logo = req.files.logo;
+  image.mv(`public/${image.name}`, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  if (req.files.logo) {
+    logo.mv(`public/${logo.name}`, (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  }
 });
 app.use("/api/v1", authRouter);
 app.use("/api/v1", newsLetterRouter);
