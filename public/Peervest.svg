@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="119.474" height="32.977" viewBox="0 0 119.474 32.977">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_7126" data-name="Rectangle 7126" width="119.474" height="32.977" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_10430" data-name="Group 10430" opacity="0.81" style="mix-blend-mode: luminosity;isolation: isolate">
+    <g id="Group_10429" data-name="Group 10429" transform="translate(0 0)">
+      <g id="Group_10428" data-name="Group 10428" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <text id="PEERWEST" transform="translate(37.397 13.963)" fill="#272727" font-size="17" font-family="Rajdhani-Medium, Rajdhani" font-weight="500"><tspan x="0" y="0">PEERWEST</tspan></text>
+        <text id="GLOBAL" transform="translate(37.398 25.484)" fill="#272727" font-size="12" font-family="Rajdhani-Regular, Rajdhani"><tspan x="0" y="0">GLOBAL</tspan></text>
+        <path id="Path_8467" data-name="Path 8467" d="M15.416,9.642a.638.638,0,0,0,.551-.956c-.746-1.3-1.426-2.484-2.136-3.653a.967.967,0,0,0-.709-.376c-4.229-.02-8.458-.011-12.687,0A2.349,2.349,0,0,0,0,4.774L15.693,31.966a.638.638,0,0,0,1.1,0c.757-1.3,1.481-2.541,2.152-3.807.113-.213-.122-.671-.288-.963Q13.892,18.893,9.1,10.6l0-.008a.636.636,0,0,1,.553-.951Z" transform="translate(0 -2.959)" fill="#07406b"/>
+        <path id="Path_8468" data-name="Path 8468" d="M53.7,5.527a.6.6,0,0,0-.517-.9c-1.564-.005-3.006-.016-4.445.036-.24.009-.516.445-.686.735q-2.841,4.876-5.652,9.769l0,.008a.6.6,0,0,1-1.03,0c-.526-.885-1.035-1.731-1.485-2.608a1.617,1.617,0,0,0-1.743-1.052c-1.15.073-2.305.046-3.556.032a.6.6,0,0,0-.525.9L41.368,25.1a.6.6,0,0,0,1.038,0L53.7,5.527" transform="translate(-21.648 -2.945)" fill="#e8a650"/>
+      </g>
+    </g>
+  </g>
+</svg>
