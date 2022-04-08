@@ -47,13 +47,15 @@ app.get("/", (req, res) => {
 app.post("/upload", function (req, res) {
   const image = req.files.image;
   const logo = req.files.logo;
-  image.mv(`public/${image.name}`, (err) => {
-    if (err) {
-      console.log(err);
-    }
-  });
+
   if (req.files.logo) {
     logo.mv(`public/${logo.name}`, (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  } else {
+    image.mv(`public/${image.name}`, (err) => {
       if (err) {
         console.log(err);
       }
