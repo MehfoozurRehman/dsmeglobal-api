@@ -13,6 +13,7 @@ const serviceRouter = require("./router/serviceRouter");
 const categoryRouter = require("./router/categoryRouter");
 const clientRouter = require("./router/clientRouter");
 const blogRouter = require("./router/blogRouter");
+const techonologiesRouter = require("./router/techonologiesRouter");
 
 // api config
 const app = express();
@@ -72,6 +73,7 @@ app.use("/api/v1", serviceRouter);
 app.use("/api/v1", categoryRouter);
 app.use("/api/v1", clientRouter);
 app.use("/api/v1", blogRouter);
+app.use("/api/v1", techonologiesRouter);
 // listner
 app.listen(PORT, () => {
   console.log("api working");
