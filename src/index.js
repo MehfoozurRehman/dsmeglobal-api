@@ -12,6 +12,7 @@ const contactRouter = require("./router/contactRouter");
 const serviceRouter = require("./router/serviceRouter");
 const categoryRouter = require("./router/categoryRouter");
 const clientRouter = require("./router/clientRouter");
+const blogRouter = require("./router/blogRouter");
 
 // api config
 const app = express();
@@ -70,6 +71,7 @@ app.use("/api/v1", contactRouter);
 app.use("/api/v1", serviceRouter);
 app.use("/api/v1", categoryRouter);
 app.use("/api/v1", clientRouter);
+app.use("/api/v1", blogRouter);
 // listner
 app.listen(PORT, () => {
   console.log("api working");
