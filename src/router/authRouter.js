@@ -9,7 +9,10 @@ router.post("/register", async (req, res) => {
     if (oldUser) {
       return res
         .status(409)
-        .json({ message: "User Already Exist. Please Login" });
+        .json({
+          message:
+            "User Already Exist. Please Login or sign up with different email",
+        });
     }
     encryptedPassword = await bcrypt.hash(password, 10);
     const user = await User({
