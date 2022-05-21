@@ -5,7 +5,8 @@ const careersAppliedSchema = mongoose.Schema(
     name: String,
     email: String,
     phone: String,
-    position: Array,
+    position: String,
+    department: Array,
     cv: String,
   },
   {

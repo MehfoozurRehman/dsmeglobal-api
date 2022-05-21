@@ -5,7 +5,7 @@ const careersSchema = mongoose.Schema(
     position: String,
     description: String,
     requirements: String,
-    category: Array,
+    department: Array,
   },
   {
     timestamps: true,
