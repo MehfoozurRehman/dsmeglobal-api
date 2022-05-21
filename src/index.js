@@ -1,9 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
-const dotenv = require("dotenv");
-dotenv.config();
+
 const authRouter = require("./router/authRouter");
 const newsLetterRouter = require("./router/newsLetterRouter");
 const workRouter = require("./router/workRouter");
@@ -15,6 +15,7 @@ const clientRouter = require("./router/clientRouter");
 const blogRouter = require("./router/blogRouter");
 const techonologiesRouter = require("./router/techonologiesRouter");
 const careersRouter = require("./router/careersRouter");
+const careersAppliedRouter = require("./router/careersAppliedRouter");
 
 // api config
 const app = express();
@@ -76,6 +77,7 @@ app.use("/api/v1", clientRouter);
 app.use("/api/v1", blogRouter);
 app.use("/api/v1", techonologiesRouter);
 app.use("/api/v1", careersRouter);
+app.use("/api/v1", careersAppliedRouter);
 // listner
 app.listen(PORT, () => {
   console.log("api working");
