@@ -34,7 +34,7 @@ router.delete("/delete_careers_applied", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "Successfully Deleted",
+          message: "successfully Deleted",
         });
       }
     });
@@ -42,19 +42,5 @@ router.delete("/delete_careers_applied", async (req, res) => {
     console.log(error);
   }
 });
-router.delete("/delete_all_careers_applied", async (req, res) => {
-  try {
-    careersAppliedModel.deleteMany({}, (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.json({
-          message: "Successfully Deleted All",
-        });
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
-});
+
 module.exports = router;

@@ -34,23 +34,7 @@ router.delete("/delete_service", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "Successfully Deleted",
-        });
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-router.delete("/delete_all_service", async (req, res) => {
-  try {
-    serviceModel.deleteMany({}, (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.json({
-          message: "Successfully Deleted All",
+          message: "successfully Deleted",
         });
       }
     });

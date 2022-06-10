@@ -5,7 +5,6 @@ const serviceSchema = mongoose.Schema(
     logo: String,
     title: String,
     image: String,
-    shortDescription: String,
     description: String,
     categories: Array,
   },
@@ -14,4 +13,4 @@ const serviceSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("ServiceModel", serviceSchema);
+module.exports = mongoose.model("serviceModel", serviceSchema);

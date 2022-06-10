@@ -17,7 +17,6 @@ router.post("/set_contact", async (req, res) => {
     console.log(error);
   }
 });
-
 router.delete("/delete_contact", async (req, res) => {
   try {
     contactModel.deleteOne({ _id: req.body._id }, (err) => {
@@ -25,23 +24,7 @@ router.delete("/delete_contact", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "Successfully Deleted",
-        });
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-router.delete("/delete_all_contact", async (req, res) => {
-  try {
-    contactModel.deleteMany({}, (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.json({
-          message: "Successfully Deleted All",
+          message: "successfully Deleted",
         });
       }
     });

@@ -34,23 +34,7 @@ router.delete("/delete_blog", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "Successfully Deleted",
-        });
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-router.delete("/delete_all_blog", async (req, res) => {
-  try {
-    blogModel.deleteMany({}, (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.json({
-          message: "Successfully Deleted All",
+          message: "successfully Deleted",
         });
       }
     });

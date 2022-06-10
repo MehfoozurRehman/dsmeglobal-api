@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "Scripts": {
+  "scripts": {
     "dev": "nodemon src/index.js",
-    "Start": "node src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
     "mongoose": "^6.3.5"
   },
   "devDependencies": {

@@ -34,7 +34,7 @@ router.delete("/delete_work", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "Successfully Deleted",
+          message: "successfully Deleted",
         });
       }
     });
@@ -50,22 +50,7 @@ router.delete("/delete_work", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "Successfully Deleted",
-        });
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
-});
-router.delete("/delete_all_work", async (req, res) => {
-  try {
-    workModel.deleteMany({}, (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.json({
-          message: "Successfully Deleted All",
+          message: "successfully Deleted",
         });
       }
     });
