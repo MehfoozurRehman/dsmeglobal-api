@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "Scripts": {
+  "scripts": {
     "dev": "nodemon src/index.js",
-    "Start": "node src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
