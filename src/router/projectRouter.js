@@ -34,7 +34,23 @@ router.delete("/delete_project", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "successfully Deleted",
+          message: "Successfully Deleted",
+        });
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.delete("/delete_all_project", async (req, res) => {
+  try {
+    projectModel.deleteMany({}, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json({
+          message: "Successfully Deleted All",
         });
       }
     });

@@ -25,7 +25,39 @@ router.delete("/delete_category", async (req, res) => {
         console.log(err);
       } else {
         res.json({
-          message: "successfully Deleted",
+          message: "Successfully Deleted",
+        });
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.delete("/delete_all_category", async (req, res) => {
+  try {
+    categoryModel.deleteMany({}, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json({
+          message: "Successfully Deleted All",
+        });
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.delete("/delete_all_careers", async (req, res) => {
+  try {
+    careersModel.deleteMany({}, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json({
+          message: "Successfully Deleted All",
         });
       }
     });
