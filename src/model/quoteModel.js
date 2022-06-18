@@ -7,7 +7,7 @@ const quoteSchema = mongoose.Schema(
     service: String,
     budget: String,
     phone: String,
-    subject: String,
+    company: String,
     message: String,
   },
   {
